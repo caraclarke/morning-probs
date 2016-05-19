@@ -3,7 +3,6 @@
 //Find the sum of all the multiples of 3 or 5 below 1000.
 
 var arr = [];
-var myTotal = 0;
 
 for (var i = 1; i < 1000; i++) {
   if ((i % 3 === 0) || (i % 5 === 0)) {
@@ -11,9 +10,7 @@ for (var i = 1; i < 1000; i++) {
   }
 }
 
-for (var j = 0; j < arr.length; j++) {
-  myTotal += arr[j];
-}
+var myTotal = arr.reduce(function(a, b) { return a + b; }, 0);
 
 console.log(arr);
 console.log(myTotal);
